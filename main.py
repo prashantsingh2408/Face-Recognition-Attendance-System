@@ -15,7 +15,8 @@ def collect_dataset():
     #Iterate over every person folder(Prashant,Alok)
     #Prashant folder contain image in .jpg
     for i,person in enumerate(people):
-        labels_dic[i] = person
+        #error:list assignment index out of range 
+        labels_dic[i] = person#error
         #Iterate over image present in (Prashant,Alok)
         for image in os.listdir('data/' + person):
             if image.endwith('.jpg'):
