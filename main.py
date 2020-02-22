@@ -1,31 +1,20 @@
-import numpy as np
-import os
+import cv2
 
-def collect_dataset():
-    '''
-    Purpose:Take image from the storage.
-    '''
-    images = [] 
-    labes = [] #for inds exing every image
-    labels_dic = []
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+#import image
+img = cv2.imread('test.jpg')
 
-    #List of person folder([Prashant,Alok] in this case)
-    people = [person for person in os.listdir('data/')]
-    
-    #Iterate over every person folder(Prashant,Alok)
-    #Prashant folder contain image in .jpg
-    for i,person in enumerate(people):
-        #error:list assignment index out of range 
-        labels_dic[i] = person#error
-        #Iterate over image present in (Prashant,Alok)
-        for image in os.listdir('data/' + person):
-            if image.endwith('.jpg'):
-                images.append(cv2.imread('data/' + person + '/' + image,0))
-                labes.append(i)
-    #images:Contain all images
-    # labes:0 for person Prashant, 1 for alok can so on.
-    # labels_dict:{0:'prashant',1:'alok'} is this case.            
-    return(images, np.array(labes), labels_dict)
-image, labels, labes_dic = collect_dataset()
+#converting to gray
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+#Detectin face
+#1.1  scalefactor
+#5   minneighbour
+faces = face_cascade.detectMultiScale(gray, 1.1, 6)
+
+# Creating rectangle 
+for (x, y ,w, h) in faces:#face is list of 4-element list
+        cv2.rectangle(img, (x,y), (x+w, y+h), (255, 0, 0), 3)
+cv2.imshow('img', img)
+cv2.waitkey()
 
