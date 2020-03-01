@@ -1,22 +1,27 @@
 import cv2
-#.CascadeClassifier:'harrcasca....' contain def of face
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-#import image
-img = cv2.imread('test.jpg')
+#image import
+path  = r"C:\Users\prashant\Documents\prog\face-recognition-attendence-system\data\Prashant\prashant2.jpg"
+img = cv2.imread(path)
+cv2.imshow("image",img)
 
 #converting to gray
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-#.detectMultiScale(image,scalefactor,minneighbour)
-#return: list of 4-element list.
-#each list represent a image coordinates.
-#[[x,y,width,height],[....],...]
-faces = face_cascade.detectMultiScale(gray, 1.1, 6)
+#Detect face
+path_cas = cv2.data.haarcascades+'haarcascade_frontalface_default.xml'
+face_cascade = cv2.CascadeClassifier(path_cas)
+faces = face_cascade.detectMultiScale(
+        imgGray,
+        scaleFactor = 1/20,
+        minNeighbors = 3,
+        minSize = (30,30)
+)
 
-#.rectangle(img,coord1,coord2,RBG,thickness)
-for (x, y ,w, h) in faces:
-        cv2.rectangle(img, (x,y), (x+w, y+h), (255, 0, 0), 3)
+#Create rectangle
+for (x,y,w,h) in faces:
+        cv2.rectangle(img, (x,y), (x+w, y+h),(225, 0, 0), 3)
+
 cv2.imshow('img', img)
 cv2.waitkey()
 
