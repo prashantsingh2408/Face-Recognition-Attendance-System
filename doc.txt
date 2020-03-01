@@ -1,0 +1,17 @@
+Registration Form-
+	Label    Entity
+      Take user image
+       submit
+Taking Attendance-
+•	Upload img
+•	Select class
+•	Testing 
+•	Attendance marking
+Coding 
+1.	imread(“”)
+2.	face detection
+3.	 Marking & save in xl.
+Display Attendance
+•	Label 
+
+
