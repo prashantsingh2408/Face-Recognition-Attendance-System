@@ -36,7 +36,10 @@ while True:
         #conver to gray
         gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
 
+        #Create a directory(folder) with person name
 
+        #save image in folder
+        
 
    
 
