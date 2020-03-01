@@ -1,3 +1,4 @@
+#For creation database of student
 import cv2
 import numpy as np
 
