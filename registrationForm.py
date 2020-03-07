@@ -8,9 +8,7 @@ noOfImage = 1000
 webcam = cv2.VideoCapture(0)
 
 # give time to person to adject face.
-sleep(2) 
-#os.chdir(os.path.join(os.getcwd,'howTo')
-os.rmdir('osModule')
+sleep(2)
 
 #start taking image
 while True:
