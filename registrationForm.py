@@ -2,9 +2,10 @@
 import cv2
 from time import sleep
 import os # for folder access
+MAXSAMPLE = 200
 
 #no of image of one person in database
-noOfImage = 400
+noOfImage = MAXSAMPLE
 webcam = cv2.VideoCapture(0)
 mainDir = os.getcwd()
 # give time to person to adject face.
@@ -13,7 +14,7 @@ sleep(2)
 #start taking image
 while True:
         #at staing 
-        if noOfImage == 400:
+        if noOfImage == MAXSAMPLE:
             #Input name
             name = input("Enter name")
             #Change dir to 'imgDataBase' where image store
@@ -59,14 +60,14 @@ while True:
         #frame = cv2.equalizeHist(frame)
         #not improve quality
 
-        #put no. on image
+        #put no.(text) on image
         textOnImage = "Image left to take {0}".format(noOfImage)
         font = cv2.FONT_HERSHEY_SIMPLEX
         #position form ORiGin
         org = (50, 50)
         #size of text
         fontScale = 1
-        color = (225,0,0)#optional
+        color = (0,0,255)#optional
         thickness = 1#optional
         cv2.putText(frame,
                     textOnImage,
