@@ -1,4 +1,4 @@
-#For creation database of student
+#For creation database of student, save in /imgDataBase directory.
 import cv2
 from time import sleep
 import os # for folder access
@@ -55,10 +55,6 @@ while True:
             os.chdir(mainDir)
             #update frame
         frame = gray
-
-        #equilize histogram 
-        #frame = cv2.equalizeHist(frame)
-        #not improve quality
 
         #put no.(text) on image
         textOnImage = "Image left to take {0}".format(noOfImage)
