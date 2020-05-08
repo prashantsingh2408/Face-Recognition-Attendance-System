@@ -1,4 +1,4 @@
-# Match face and detect name.
+# Match face, detect name and save attendence.
 import cv2
 import os
 from time import sleep
