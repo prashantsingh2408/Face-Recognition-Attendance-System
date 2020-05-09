@@ -1,5 +1,5 @@
 #Completed
-#For creation database of student, save in /imgDataBase directory.
+#For creation database of student, save in /img directory.
 import cv2
 from time import sleep
 import os # for folder access
