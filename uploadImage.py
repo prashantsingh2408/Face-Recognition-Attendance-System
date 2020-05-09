@@ -1,3 +1,4 @@
+#Completed
 #For creation database of student, save in /imgDataBase directory.
 import cv2
 from time import sleep
@@ -18,7 +19,7 @@ while True:
             #Input name
             name = input("Enter name")
             #Change dir to 'imgDataBase' where image store
-            os.chdir("imgDataBase")
+            os.chdir("img")
             #Create a directory(folder) with person name
             os.mkdir(name)
             #Return to main dir
@@ -39,14 +40,14 @@ while True:
         gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
             #detect face
         detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-        faces = detector.detectMultiScale(gray,1.1,5)
+        faces = detector.detectMultiScale(gray,scaleFactor = 1.1, minNeighbors=5)
         
         #rectangle create and save img
         for (x,y,w,h) in faces:
             cv2.rectangle(gray,(x,y),(x+w,y+h),(255,0,0),2)
             crop_face = gray[y:y+h, x:x+w]
             #change dir
-            os.chdir("imgDataBase")
+            os.chdir("img")
             os.chdir(name)
             #write img
             imgName = "{0}{1}.jpg".format(name,noOfImage)
