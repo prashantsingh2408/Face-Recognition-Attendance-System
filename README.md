@@ -12,3 +12,5 @@ Collage Project
        *It recongnize and mark attendnece.
 ### 4. showAttendence.py
        *It display attendnece.
+### 4. run.py
+       *interface for user to run all modules.
