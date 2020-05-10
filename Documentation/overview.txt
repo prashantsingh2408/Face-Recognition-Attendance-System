@@ -8,4 +8,4 @@ Module
 4.showAttendnec.py
 	display attendence 
 5.howto
-	Describe every technical things use like modules, methods.
+	Describe every technical things use like modules methods.
