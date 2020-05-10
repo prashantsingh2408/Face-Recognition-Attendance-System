@@ -1,6 +1,6 @@
 import os
 
-#print("Current dir")
+#print("Current dir")ru
 #print(os.getcwd())
 #print('-------')
 

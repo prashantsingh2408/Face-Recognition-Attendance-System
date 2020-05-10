@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\imgDataBase",
-    "\\removeCode"
+    "\\Documentation",
+    "\\Documentation\\howToUse",
+    "\\img\\Prashant"
   ],
-  "SelectedNode": "\\createDataBase.py",
+  "SelectedNode": "\\Documentation\\howToUse\\osModule.py",
   "PreviewInSolutionExplorer": false
 }
