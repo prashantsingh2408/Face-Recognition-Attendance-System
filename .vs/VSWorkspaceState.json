@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Documentation",
-    "\\Documentation\\howToUse",
-    "\\img\\Prashant"
+    "\\Documentation"
   ],
-  "SelectedNode": "\\Documentation\\howToUse\\osModule.py",
+  "SelectedNode": "\\uploadImage.py",
   "PreviewInSolutionExplorer": false
 }

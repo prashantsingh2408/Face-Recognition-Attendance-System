@@ -17,7 +17,7 @@ while True:
         #at staing 
         if noOfImage == MAXSAMPLE:
             #Input name
-            name = input("Enter name")
+            name = input("Enter name to register\n")
             #Change dir to 'imgDataBase' where image store
             os.chdir("img")
             #Create a directory(folder) with person name
@@ -73,6 +73,8 @@ while True:
         #show the current img
         cv2.imshow("image", frame)
         key = cv2.waitKey(1)
+
+
 
         
 
