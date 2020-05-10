@@ -4,7 +4,7 @@ import cv2
 from time import sleep
 import os # for folder access
 
-MAXSAMPLE = 100 # no of img to be taken of one person.
+MAXSAMPLE = 300 # no of img to be taken of one person.
 
 noOfImage = MAXSAMPLE
 webcam = cv2.VideoCapture(0) # open camera
@@ -21,7 +21,10 @@ while True:
             #Change dir to 'imgDataBase' where image store
             os.chdir("img")
             #Create a directory(folder) with person name
-            os.mkdir(name)
+            try:
+                os.mkdir(name)
+            except:
+                print('your photo exit,adding more')
             #Return to main dir
             os.chdir(mainDir)
          

@@ -1,0 +1,6 @@
+opencv-python
+Pillow
+numpy
+pickle-mixin
+os-sys
+times
