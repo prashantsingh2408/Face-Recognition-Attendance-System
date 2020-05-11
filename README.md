@@ -5,7 +5,7 @@ Collage Project
 ### 1. uploadImage.py
        * For registration of new student.
        * It upload image and name of students.
-       ![screenshot](https://i.ibb.co/N1WQTz8/upload-Img.png)
+       ![Kiku](images/Kiku.jpg)
 ### 2. trainner.py
        *It create a trainner with the help of images store.
        *It help to identify name of students by their faces.
