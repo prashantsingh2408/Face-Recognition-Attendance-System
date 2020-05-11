@@ -9,7 +9,7 @@ Collage Project
 ### 2. trainner.py
        *It create a trainner with the help of images store.
        *It help to identify name of students by their faces.
-![trainner](READMEResources/trainner.png)
+![trainner](READMEResources/trainner .png)
 ### 3. recognizer.py
        *It recongnize and mark attendnece.
 ### 4. showAttendence.py
