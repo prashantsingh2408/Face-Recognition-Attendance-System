@@ -71,6 +71,6 @@ try:#if no image is present in exception arise.
 	print("trained")
 	
 except:
-	print("no iamge to recognize, please upload image")
+	print("no image to recognize, please upload image")
 	print("untrained")
 
