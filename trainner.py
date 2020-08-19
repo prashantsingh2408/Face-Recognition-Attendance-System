@@ -9,7 +9,7 @@ print("traning start...")
 
 #Load dir of images for training
 base_dir = os.path.dirname(os.path.abspath(__file__))
-#.abspath(__file__) gives path of current file wich is ...face-re.../trainner.py
+#.abspath(__file__) gives path of current file which is ...face-re.../trainner.py
 #.dirname gives ...face-re/ as it remove trainner.py form path
 
 img_dir1 = os.path.join(base_dir, "img")

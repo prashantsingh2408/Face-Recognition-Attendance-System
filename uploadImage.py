@@ -16,13 +16,15 @@ sleep(2) # give time to person to adject face.
 while True:
         #at staing input name of person 
         if noOfImage == MAXSAMPLE:
-            #Input name
+            #Input name, rollNo and claaStu
             name = input("Enter name to register\n")
+            rollNo= input("Enter roll no\n")
+            classStu = input("Enter year(1,2,3,4)\n")
             #Change dir to 'imgDataBase' where image store
             os.chdir("img")
             #Create a directory(folder) with person name
             try:
-                os.mkdir(name)
+                os.mkdir(name+ ' ' + rollNo + ' ' + classStu)
             except:
                 print('your photo exit,adding more')
             #Return to main dir
@@ -40,16 +42,15 @@ while True:
         detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         faces = detector.detectMultiScale(gray,scaleFactor = 1.1, minNeighbors=5)
         
-  
+    
+        # create rectangle, put text on image, Display current img, save img
+        for (x,y,w,h) in faces: 
         #(x,y,w,h) -> axis, width and height of face
-        for (x,y,w,h) in faces:
-            
-            #create rec
+            # create rectangle
             color = (255, 0 , 0) #color of recangle
             thickness = 2 # thickness of rectangle
             cv2.rectangle(frame,(x,y),(x+w,y+h),color ,thickness)
             
-            #display image
             #put no.(text) on image
             textOnImage = "Image left to take {0}".format(noOfImage)
             font = cv2.FONT_HERSHEY_SIMPLEX
@@ -70,7 +71,7 @@ while True:
             
             #change dir
             os.chdir("img")
-            os.chdir(name)
+            os.chdir(name+ ' ' + rollNo + ' ' + classStu)
             
             #write img
             imgName = "{0}{1}.jpg".format(name,noOfImage)# name of image
