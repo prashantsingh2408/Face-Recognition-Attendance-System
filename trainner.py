@@ -14,10 +14,14 @@ print("traning start...")
 
 #img_dir1 = os.path.join(base_dir, "img")
 #join the base dir with img to get dir of ...face-re.../img/ 
+
+#Use for Detecting face later
+detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+
 os.chdir("img")
 #DISABLEimg_dir2 = os.path.join(base_dir, "imgOtherSrc")
 
-face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+
 #Create recognizer 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 #We need to train this recognizer
@@ -26,7 +30,7 @@ recognizer = cv2.face.LBPHFaceRecognizer_create()
 current_id = 0
 labels_ids = {} #{'name', id}
 ids = [] #id of person 
-face = []	#contain image to be train
+faces = []	#contain image to be train
 
 
 for root, dirs, files in os.walk(os.getcwd()):
@@ -49,7 +53,7 @@ for root, dirs, files in os.walk(os.getcwd()):
 			#DISABLEsize = (550,550)#no need to resize
 			#final_img = pil_img #DISpil_img.resize(size, Image.ANTIALIAS)#resize
 			img_array = np.array(img,"uint8")
-			face = face_cascade.detectMultiScale(img_array, scaleFactor = 1.1, minNeighbors=5)
+			face = detector.detectMultiScale(img_array, scaleFactor = 1.1, minNeighbors=5)
 			cv2.waitKey(1)
 			for (x,y,w,h) in face:
 				roi = img_array[y:y+h, x:x+w] # roi = region of interest (face of person in img)
@@ -58,8 +62,10 @@ for root, dirs, files in os.walk(os.getcwd()):
 				ids.append(labels_ids[label])#it contain labels corresponding to faces in train[]
 
 #label will use in recognizer.py modules,so save in file
-with open("labels.pickle",'wb') as f:
-	pickle.dump(labels_ids,f)
+os.chdir('..')
+labelsFile = open("labels.pickle",'wb')
+pickle.dump(labels_ids,labelsFile)
+
 
 try:#if no image is present in exception arise.
 
