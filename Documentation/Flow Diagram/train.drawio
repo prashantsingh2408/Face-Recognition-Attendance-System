@@ -1,44 +1,53 @@
-<mxfile host="app.diagrams.net" modified="2020-08-20T07:10:57.052Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36 OPR/69.0.3686.66" etag="WkYu4tV927xJCU9juQMc" version="13.6.3" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-20T07:29:19.245Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36 OPR/69.0.3686.66" etag="nVGUF4gywpWsg7oOsOwa" version="13.6.3" type="github">
   <diagram id="u7ltzh_uHDB_XK1V_iwC" name="Page-1">
     <mxGraphModel dx="742" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="GVK7rI1TbYUse70XCFeg-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="GVK7rI1TbYUse70XCFeg-1" target="GVK7rI1TbYUse70XCFeg-6" edge="1">
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="GVK7rI1TbYUse70XCFeg-1" target="YRlCc5pRuM1rx9sRa8mx-54">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="250" as="targetPoint" />
+            <mxPoint x="370" y="160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-1" value="Start(training)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="310" y="130" width="120" height="60" as="geometry" />
+          <mxGeometry x="310" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-4" target="GVK7rI1TbYUse70XCFeg-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-4" value="Move img directory" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="305" y="280" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-6" target="GVK7rI1TbYUse70XCFeg-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YRlCc5pRuM1rx9sRa8mx-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GVK7rI1TbYUse70XCFeg-6" target="YRlCc5pRuM1rx9sRa8mx-1">
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.07;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GVK7rI1TbYUse70XCFeg-6" target="YRlCc5pRuM1rx9sRa8mx-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-6" value="Walk though img directory using loop" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="310" y="280" width="120" height="60" as="geometry" />
+          <mxGeometry x="305" y="370" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-8" target="GVK7rI1TbYUse70XCFeg-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.07;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GVK7rI1TbYUse70XCFeg-8" target="YRlCc5pRuM1rx9sRa8mx-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-8" value="Create&amp;nbsp;&lt;br&gt;label_ids = {label : id}&lt;br&gt;{Person1 : 0, Person2 : 1}" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="335" y="460" width="200" height="100" as="geometry" />
+          <mxGeometry x="335" y="480" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-10" target="GVK7rI1TbYUse70XCFeg-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-10" value="Crop face form img" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="375" y="600" width="120" height="60" as="geometry" />
+          <mxGeometry x="375" y="620" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="YRlCc5pRuM1rx9sRa8mx-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GVK7rI1TbYUse70XCFeg-12" target="YRlCc5pRuM1rx9sRa8mx-37">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="400" y="930" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="GVK7rI1TbYUse70XCFeg-12" value="Create &lt;br&gt;faceList = [img1Face, img2face,img3Face, img4face]&lt;br&gt;&lt;br&gt;And corresponding &lt;br&gt;faceLableList =&amp;nbsp; &amp;nbsp;[0,0,1,1]" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="GVK7rI1TbYUse70XCFeg-12" value="Create &lt;br&gt;faceImg = [img1Face, img2face,img3Face, img4face]&lt;br&gt;&lt;br&gt;And corresponding &lt;br&gt;faceCorrespondingId=&amp;nbsp; &amp;nbsp;[0,0,1,1]" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="260" y="730" width="350" height="170" as="geometry" />
         </mxCell>
         <mxCell id="YRlCc5pRuM1rx9sRa8mx-1" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
@@ -113,8 +122,11 @@
         <mxCell id="YRlCc5pRuM1rx9sRa8mx-33" value="Save labels&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="325" y="1110" width="220" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="YRlCc5pRuM1rx9sRa8mx-35" value="Create and Train recognizer as&lt;br&gt;recognizer.train(faceList,CorrespondingLabels)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="290" y="1260" width="290" height="110" as="geometry" />
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YRlCc5pRuM1rx9sRa8mx-35" target="YRlCc5pRuM1rx9sRa8mx-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-35" value="Train recognizer as&lt;br&gt;recognizer.train(faceImg,FaceCorrespondingId)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1270" width="290" height="110" as="geometry" />
         </mxCell>
         <mxCell id="YRlCc5pRuM1rx9sRa8mx-37" value="If walk completed" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="345" y="960" width="180" height="100" as="geometry" />
@@ -146,6 +158,24 @@
         </mxCell>
         <mxCell id="YRlCc5pRuM1rx9sRa8mx-43" value="no" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="YRlCc5pRuM1rx9sRa8mx-42">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YRlCc5pRuM1rx9sRa8mx-54" target="GVK7rI1TbYUse70XCFeg-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YRlCc5pRuM1rx9sRa8mx-54" target="YRlCc5pRuM1rx9sRa8mx-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-54" value="Create Recognizer&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="140" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-58" value="label_ids use later in &lt;br&gt;recognizing &lt;br&gt;person though its id" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="420" width="230" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-61" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;it needs &#39;face Image&#39; and &lt;br&gt;&#39;corresponding id&#39;&amp;nbsp;&lt;br&gt;for training as parameter&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="60" width="330" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-63" value="Save Recognizer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1460" width="290" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
