@@ -1,1 +1,43 @@
-<mxfile host="Electron" modified="2020-08-19T05:02:40.646Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/13.6.2 Chrome/83.0.4103.122 Electron/9.2.0 Safari/537.36" etag="KZR9mBRhuSO20qabem4o" version="13.6.2" type="device"><diagram id="u7ltzh_uHDB_XK1V_iwC" name="Page-1">3Zhdk5owFIZ/DTO7F93hQ8G9LXVtp92b2s/LKEdICxwmBD/663sCicjgWndmW6wXOuTNiSe8eXIIWl6YbWeCFckjRpBarh1tLe+N5bqBP6FvJewaYaxaSogFjxrJaYU5/wVatLVa8QjKTqBETCUvuuIS8xyWsqMxIXDTDVth2s1asBh6wnzJ0r76lUcyadTJ2G71t8DjxGR2bN2TMROshTJhEW4OJG9qeaFAlM1Vtg0hVd4ZX5pxD0/07icmIJfnDJh9eR+Id86nxffPJQT2t/AB4lfj5lfWLK30DevJyp1xACIyRDdRyARjzFk6bdXXAqs8ApXGplYb8wGxINEh8QdIudOryyqJJCUyS3Vvk1MlevLetFRiJZZw4oYMI0zEIE/EjfYrQOQCZiDFjsYJSJnk6+48mGYo3se1NtOFdvoZrjs91+c0YXkjBeM5z+Pb3iK0Fiu/NgmXMC9Y7cSG9t0xO9cgJGxPG9o3QA/wzP7T29bXzU27BxwDdnLAv4l7ccuCawN1dCao/pCgjnquPyLlVDVYDc1U8aTazgWVXtT5jmNrD4KtEwzN7f21ceufye1kSG79nuuhACYVrIw+H2GJcU5miYsjdt8ejFin/3T6z5GdnImsYx9fqn/D7KRn+4zXtTZlC0hLurhRDf5TaTSJkKJD7+7u1pRjIBDVdAsQJeaW67NM8ZovymLv5wWRPhoPTrp3baQbi/+Mujsk6maa/XNFzTqZ2R4uarTrg/EFVuvx/eAMuz0r56w5ohnPbJ53D2n0FqzkVSUrUZ/fQFIXVzXDxlXr/YWZHXh/z2xqtm/idd/B3xne9Dc=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-08-20T06:10:20.452Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36 OPR/69.0.3686.66" etag="-TaizjgOsQpL6BUG7D-D" version="13.6.3" type="github">
+  <diagram id="u7ltzh_uHDB_XK1V_iwC" name="Page-1">
+    <mxGraphModel dx="742" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GVK7rI1TbYUse70XCFeg-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-1" target="GVK7rI1TbYUse70XCFeg-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-1" value="Start(training)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-4" target="GVK7rI1TbYUse70XCFeg-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-4" value="current_id = 0&lt;br&gt;label_ids = {}&lt;br&gt;labels = []&lt;br&gt;train = []" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="170" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-6" target="GVK7rI1TbYUse70XCFeg-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-6" value="Create a Recognizer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-8" target="GVK7rI1TbYUse70XCFeg-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-8" value="Give labels ( like 1,2,3..) to every person&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-10" target="GVK7rI1TbYUse70XCFeg-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-10" value="Move labeled image to trainer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GVK7rI1TbYUse70XCFeg-12" value="Save trainer in directory for future detection of image" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
