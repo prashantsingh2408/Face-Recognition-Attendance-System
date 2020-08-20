@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-08-20T07:29:19.245Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36 OPR/69.0.3686.66" etag="nVGUF4gywpWsg7oOsOwa" version="13.6.3" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-20T07:41:03.543Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36 OPR/69.0.3686.66" etag="jUr9PMyZ5SAjbQiFf5aD" version="13.6.3" type="github">
   <diagram id="u7ltzh_uHDB_XK1V_iwC" name="Page-1">
-    <mxGraphModel dx="742" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="742" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,13 +10,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-1" value="Start(training)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="310" y="60" width="120" height="60" as="geometry" />
+          <mxGeometry x="305" y="40" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-4" target="GVK7rI1TbYUse70XCFeg-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-4" value="Move img directory" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="305" y="280" width="120" height="70" as="geometry" />
+          <mxGeometry x="305" y="260" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="GVK7rI1TbYUse70XCFeg-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GVK7rI1TbYUse70XCFeg-6" target="GVK7rI1TbYUse70XCFeg-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -165,17 +165,17 @@
         <mxCell id="YRlCc5pRuM1rx9sRa8mx-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YRlCc5pRuM1rx9sRa8mx-54" target="YRlCc5pRuM1rx9sRa8mx-61">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YRlCc5pRuM1rx9sRa8mx-54" value="Create Recognizer&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="260" y="140" width="210" height="90" as="geometry" />
+        <mxCell id="YRlCc5pRuM1rx9sRa8mx-54" value="Create Recognizer&lt;br&gt;cv2.face.LBPHFaceRecognizer_create()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="140" width="290" height="90" as="geometry" />
         </mxCell>
         <mxCell id="YRlCc5pRuM1rx9sRa8mx-58" value="label_ids use later in &lt;br&gt;recognizing &lt;br&gt;person though its id" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="590" y="420" width="230" height="150" as="geometry" />
         </mxCell>
         <mxCell id="YRlCc5pRuM1rx9sRa8mx-61" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;it needs &#39;face Image&#39; and &lt;br&gt;&#39;corresponding id&#39;&amp;nbsp;&lt;br&gt;for training as parameter&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="520" y="60" width="330" height="130" as="geometry" />
+          <mxGeometry x="550" y="10" width="330" height="130" as="geometry" />
         </mxCell>
         <mxCell id="YRlCc5pRuM1rx9sRa8mx-63" value="Save Recognizer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="290" y="1460" width="290" height="110" as="geometry" />
+          <mxGeometry x="290" y="1430" width="290" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
