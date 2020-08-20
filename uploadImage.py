@@ -1,4 +1,3 @@
-#Completed
 #For creation database of student, save in /img directory.
 import cv2
 from time import sleep
@@ -6,44 +5,45 @@ import os # for folder access
 
 MAXSAMPLE = 300 # no of img to be taken of one person.
 
-noOfImage = MAXSAMPLE
-webcam = cv2.VideoCapture(0) # open camera
-mainDir = os.getcwd() # get current director of this file
-
 sleep(2) # give time to person to adject face.
 
-#start taking image
-while True:
+#take many image using loop
+while (MAXSAMPLE > 0):
         #at staing input name of person 
-        if noOfImage == MAXSAMPLE:
+        if MAXSAMPLE == 300
             #Input name, rollNo and claaStu
             name = input("Enter name to register\n")
             rollNo= input("Enter roll no\n")
             classStu = input("Enter year(1,2,3,4)\n")
-            #Change dir to 'imgDataBase' where image store
+
+            #Change dir to 'img' where image store
             os.chdir("img")
-            #Create a directory(folder) with person name
+
+            #Create a directory(folder) with person name and move in it
             try:
                 os.mkdir(name+ ' ' + rollNo + ' ' + classStu)
+                os.chdir(name+ ' ' + rollNo + ' ' + classStu)
             except:
                 print('your photo exit,adding more')
-            #Return to main dir
-            os.chdir(mainDir)
-         
+            
+            # initialize camera
+            webcam = cv2.VideoCapture(0)
+
+            #Decrement MAXSAMPLE by 1
+            MAXSAMPLE = MAXSAMPLE - 1  
+
+        #Take image
         check, frame = webcam.read()
-        #Capture frame by frame
         # .read() -> return [status,image frame]
         # status  -> True if image taken otherwise False
         
-        #Detect face
-            #converty to gray for good detection
+        #converty to gray for good detection
         gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-            #detect face
+        
+        #detect face
         detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         faces = detector.detectMultiScale(gray,scaleFactor = 1.1, minNeighbors=5)
         
-    
-        # create rectangle, put text on image, Display current img, save img
         for (x,y,w,h) in faces: 
         #(x,y,w,h) -> axis, width and height of face
             # create rectangle
@@ -62,28 +62,17 @@ while True:
                         textOnImage,
                         org,font,fontScale,color,thickness)
 
-            #show the current img
+            #Diplay current img
             cv2.imshow("image", frame)
             key = cv2.waitKey(1) #wait, otherwise system hacks and stop.
 
             #save Face
             crop_face = frame[y:y+h, x:x+w]
-            
-            #change dir
-            os.chdir("img")
-            os.chdir(name+ ' ' + rollNo + ' ' + classStu)
-            
-            #write img
-            imgName = "{0}{1}.jpg".format(name,noOfImage)# name of image
+            imgName = "{0}{1}.jpg".format(name,MAXSAMPLE)
             cv2.imwrite(imgName,crop_face)
-            
-            #Return to main dir
-            os.chdir(mainDir)
-        
-        #Break when all image are taken
-        noOfImage = noOfImage - 1
-        if noOfImage == 0:
-            break
+                   
+        #For breaking loop when all image are taken
+        MAXSAMPLE = MAXSAMPLE - 1
 
 
 

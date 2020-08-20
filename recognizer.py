@@ -5,7 +5,7 @@ import os
 from time import sleep
 import pickle
 
-detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+faceDetector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read("tranner.yml")
 

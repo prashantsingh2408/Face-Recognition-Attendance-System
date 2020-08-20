@@ -8,28 +8,28 @@ import pickle
 print("traning start...")
 
 #Load dir of images for training
-base_dir = os.path.dirname(os.path.abspath(__file__))
+#base_dir = os.path.dirname(os.path.abspath(__file__))
 #.abspath(__file__) gives path of current file which is ...face-re.../trainner.py
 #.dirname gives ...face-re/ as it remove trainner.py form path
 
-img_dir1 = os.path.join(base_dir, "img")
+#img_dir1 = os.path.join(base_dir, "img")
 #join the base dir with img to get dir of ...face-re.../img/ 
-
+os.chdir("img")
 #DISABLEimg_dir2 = os.path.join(base_dir, "imgOtherSrc")
 
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 #Create recognizer 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 #We need to train this recognizer
+#recognizer needs train[] and name(labels[]) of ther person to train
 
 current_id = 0
-label_ids = {} #{'name', id}
-labels = [] #id of person 
-train = []	#contain image to be train
+labels_ids = {} #{'name', id}
+ids = [] #id of person 
+face = []	#contain image to be train
 
-for root, dirs, files in os.walk(img_dir1):
-	#print(root)
-	#print(files)
+
+for root, dirs, files in os.walk(os.getcwd()):
 	for file in files:
 		if file.endswith("png") or file.endswith("jpg"):
 			path = os.path.join(root,file)
@@ -41,30 +41,29 @@ for root, dirs, files in os.walk(img_dir1):
 
 			#provie each each lable a id
 			#it is require at the time of training
-			if not label in label_ids:#label name should not more then one time in label_ids{}
-				label_ids[label] = current_id
+			if not label in labels_ids:#label name should not more then one time in label_ids{}
+				labels_ids[label] = current_id
 				current_id += 1
-			id = label_ids[label]
 
-			pil_img = Image.open(path).convert("L")#L for grayscale
+			img = Image.open(path).convert("L")#L for grayscale
 			#DISABLEsize = (550,550)#no need to resize
-			final_img = pil_img #DISpil_img.resize(size, Image.ANTIALIAS)#resize
-			img_array = np.array(final_img,"uint8")
-			faces = face_cascade.detectMultiScale(img_array, scaleFactor = 1.1, minNeighbors=5)
+			#final_img = pil_img #DISpil_img.resize(size, Image.ANTIALIAS)#resize
+			img_array = np.array(img,"uint8")
+			face = face_cascade.detectMultiScale(img_array, scaleFactor = 1.1, minNeighbors=5)
 			cv2.waitKey(1)
-			for (x,y,w,h) in faces:
+			for (x,y,w,h) in face:
 				roi = img_array[y:y+h, x:x+w] # roi = region of interest (face of person in img)
 				
-				train.append(roi)#it contain all image face
-				labels.append(id)#it contain labels corresponding to faces in train[]
+				faces.append(roi)#it contain all image face
+				ids.append(labels_ids[label])#it contain labels corresponding to faces in train[]
 
 #label will use in recognizer.py modules,so save in file
 with open("labels.pickle",'wb') as f:
-	pickle.dump(label_ids,f)
+	pickle.dump(labels_ids,f)
 
 try:#if no image is present in exception arise.
 
-	recognizer.train(train,np.array(labels))
+	recognizer.train(faces,np.array(ids))
 	#recognizer needs train[] and name(labels[]) of ther person to train
 
 	recognizer.save('tranner.yml')
