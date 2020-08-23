@@ -4,6 +4,17 @@ import cv2
 import os
 from time import sleep
 import pickle
+from openpyxl import Workbook 
+
+def makeAttendance(name):
+    workbook = Workbook()
+    sheet = workbook.active
+    data = name.split('_')
+    sheet["A1"] = data[0]
+    sheet["B1"] = data[1]
+    sheet["C1"] = data[2]
+    sheet["D1"] = 'present'
+    workbook.save(filename="database.xlsx")
 
 detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 recognizer = cv2.face.LBPHFaceRecognizer_create()
@@ -36,9 +47,14 @@ while True:
         #predict the face 
         #conf conformation
         #0 means 100% confirm
+        
+        #print conformation no
+        print(conf)
 
         if conf>=45 and conf<=85:
             print(labels[id])
+            #Save attentance on xl file
+            makeAttendance(labels[id])
         #Create rectangel
         color = (255,0,0)
         thickness = 2

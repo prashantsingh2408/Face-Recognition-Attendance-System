@@ -24,8 +24,8 @@ while (MAXSAMPLE > 0):
 
             #Create a directory(folder) with person name and move in it
             try:
-                os.mkdir(name+ ' ' + rollNo + ' ' + classStu)
-                os.chdir(name+ ' ' + rollNo + ' ' + classStu)
+                os.mkdir(name+ '_' + rollNo + '_' + classStu)
+                os.chdir(name+ '_' + rollNo + '_' + classStu)
             except:
                 print('your photo exit,adding more')
             
