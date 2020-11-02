@@ -24,6 +24,7 @@ os.chdir("img")
 
 #Create recognizer 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
+#recognizer = cv2.face_LBPHFaceRecognizer_create()
 #We need to train this recognizer
 #recognizer needs train[] and name(labels[]) of ther person to train
 
