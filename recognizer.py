@@ -4,17 +4,63 @@ import cv2
 import os
 from time import sleep
 import pickle
-from openpyxl import Workbook 
+import openpyxl
+saved_create_excute_once = False
+saved = []  # make track of saved student
 
+def saved_create():
+    wb = openpyxl.load_workbook("database.xlsx")
+    # sheet = wb.get_sheet_by_name('Sheet')
+    sheet = wb['Sheet']
+
+    loop = 1
+    while True:
+        if (sheet.cell(row=loop, column=1).value == None):
+            break;
+        if (sheet.cell(row=loop, column=1).value not in saved):
+            saved.append(sheet.cell(row=loop, column=1).value)
+        # print("fetch_sheet", sheet.cell(row=loop, column=1).value)
+        loop = loop + 1
 def makeAttendance(name):
-    workbook = Workbook()
-    sheet = workbook.active
+    saved_create()
+    # get student input data
     data = name.split('_')
-    sheet["A1"] = data[0]
-    sheet["B1"] = data[1]
-    sheet["C1"] = data[2]
-    sheet["D1"] = 'present'
-    workbook.save(filename="database.xlsx")
+    
+    #stop if data is already saved
+    if (data[0] in saved):
+        print('Your Attendance is taken,give chance to your friends')
+        input("Press Enter to continue")
+        return 0
+
+    # make track of saved student
+    saved.append(data[0])
+    print('data', data)
+
+
+    #find empty row in xl file to save 
+    row_to_save = 1 # let empty row is 1 
+    while True:
+        wb = openpyxl.load_workbook("database.xlsx")
+        sheet = wb.get_sheet_by_name('Sheet')
+        if sheet.cell(row=row_to_save, column=1).value == None:
+            print("Empty row found at", row_to_save)
+            break
+        else:
+            print(row_to_save,"is not empty row")
+            row_to_save = row_to_save + 1
+            print("Incremented row_to_save = ",row_to_save)
+
+
+    #Save in empty row
+    row_to_save = str(row_to_save)
+    sheet["A" + row_to_save] = data[0]
+    sheet["B" + row_to_save] = data[1]
+    sheet["C" + row_to_save] = data[2]
+    sheet["D" + row_to_save] = 'present'
+    wb.save(filename="database.xlsx")
+    input("""One Student attendance is update in database.xlsx,\n
+             Give Chance to you friend
+             Press ENTER to continue""")
 
 detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 recognizer = cv2.face.LBPHFaceRecognizer_create()
@@ -29,7 +75,8 @@ with open("labels.pickle", 'rb') as f:
      #labels = {'id','name'}
      
 #Take image
-webcam = cv2.VideoCapture(0)#start camera
+webcam = cv2.VideoCapture(0)  #start camera
+time_of_recognition = 100 #Stop recognizing after some time
 while True:
     check, frame = webcam.read() # start reading image
     gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
@@ -58,8 +105,17 @@ while True:
         #Create rectangel
         color = (255,0,0)
         thickness = 2
-        cv2.rectangle(frame,(x,y),(x+w,y+h),color ,thickness)
+        cv2.rectangle(frame, (x, y), (x + w, y + h), color, thickness)
+    
+    #Stop recognizing after some time
+    print(time_of_recognition)
+    time_of_recognition = time_of_recognition - 1
+    if (time_of_recognition == 0):
+        break;
+    #END Stop recognizing after some time
+    
     cv2.imshow("frame",frame)
     cv2.waitKey(1)
+ 
 
 
